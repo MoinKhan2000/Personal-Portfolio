@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: black;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#header::after {
+    content: "";
+    background: url(images/background.png)no-repeat center center/cover;
+    background-size: cover;
+    background-size: contain;
+    z-index: -1;
+    top: 62px;
+    right: -105px;
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    opacity: 1;
+    filter: revert;
+    position: fixed;
+}
+
+#header::before {
+    content: "";
+    background: url(https://creazilla-store.fra1.digitaloceanspaces.com/silhouettes/1631547/abstract-shape-silhouette-f35580-md.png)no-repeat center center/cover;
+    background-size: contain;
+    z-index: -1;
+    transform: translate(24px, 73px);
+    top: 61px;
+    right: -95px;
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    opacity: 1;
+    position: fixed;
+    rotate: -3deg;
+}
+
+#logo {
+    width: 85px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 4px #f80483);
+}
+
+.container {
+    padding: 10px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    padding: 5px;
+    border: 2px solid #f80483;
+    min-width: 90px;
+    text-align: center;
+    border-radius: 5px;
+    background: #f80483;
+}
+
+nav ul li:hover {
+    background-color: white;
+    border-color: #f80483;
+    transition: all 0.5s;
+}
+
+nav ul li:hover a {
+
+    color: #f80483;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font: 18px;
+    position: relative;
+    font-weight: bold;
+    color: white
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    left: 0px;
+    background: #f80483;
+    bottom: -4px;
+    z-index: 1;
+    position: absolute;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header_text {
+    margin-top: 10%;
+    font-size: 23px;
+}
+
+.header_text h1 {
+    font-size: 60px;
+    max-width: 60%;
+    margin-left: 40px;
+}
+
+.header_text h1 span {
+    color: #f80483;
+}
+
+/* About Section */
+#about {
+    color: #ababab;
+    padding: 0% 10%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+.about-col-1 {
+    flex-basis: 50%;
+}
+
+.about-col-1 img {
+    width: 70%;
+    border-radius: 15px;
+    filter: drop-shadow(2px 4px 6px black);
+    border: 2px solid black;
+}
+
+.about-col-2 {
+    flex-basis: 45%;
+    color: black;
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: bold;
+    /* border: 2px solid; */
+    padding: 14px 0px;
+    border-radius: 10px;
+    color: #f90483;
+}
+
+.tab-titles {
+    display: flex;
+}
+
+.tab-links {
+    margin: 20px;
+    margin-left: 0px;
+    font-weight: bold;
+    position: relative;
+    color: #f90483;
+}
+
+.tab-links::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    left: 0px;
+    background: #f80483;
+    bottom: -6px;
+    z-index: 1;
+    position: absolute;
+    transition: 1s;
+
+}
+
+.tab-links:hover::after {
+    width: 100%;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #f80483;
+    font-size: 20px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Services Section Starts  */
+
+
+.all-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+.services-list {
+    padding: 10px;
+    text-align: start;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.services-list div {
+    background: whitesmoke;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 12px;
+    transition: background 0.5s, transform 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px -1px;
+}
+
+.services-list div p {
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    color: #f80483;
+    margin-top: 10px;
+}
+
+.services-list div h2 {
+    margin: 10px 0px;
+}
+
+.services-list div:hover {
+    background: #f80483;
+    transform: translateY(-10px);
+    color: black;
+}
+
+.services-list div:hover a {
+    color: white;
+}
+
+/* ************* Portfolio Section Starts Here*************** */
+#portfolio {
+    /* margin: 20px 0px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.work-list {
+    display: flex;
+    padding: 30px 0px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0px 0px 8px 2px black;
+}
+
+.work img {
+    height: 300px;
+    width: 220px;
+    position: relative;
+    transition: all 1s;
+}
+
+.layer {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), #f80483);
+    border-radius: 10px;
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    text-align: center;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s;
+    color: white;
+}
+
+.layer a {
+    color: black;
+    border: 2px solid white;
+    border-radius: 2px solid 50%;
+    border-radius: 55%;
+    text-align: center;
+    width: 45px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white
+}
+
+.layer a:hover {
+    background: #f80483;
+    color: white;
+}
+
+.work:hover img {
+    transform: scale(2)
+}
+
+.work:hover .layer {
+    width: 100%;
+    display: flex;
+    left: 0;
+}
+
+#see-more {
+    display: flex;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#see-more button,
+.btn {
+    background-color: transparent;
+    color: #f80483;
+    padding: 5px;
+    border: none;
+    padding: 5px 10px;
+    border: 2px solid #f80483;
+    border-radius: 5px;
+    transition: all 1s;
+    width: 100px;
+}
+
+#see-more button:hover,
+.btn:hover {
+    color: whitesmoke;
+    background: #f80483;
+}
+
+/* 8********** contact ************ */
+.contact-left {
+    flex-basis: 35%;
+    line-height: 1.5;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: revert;
+    align-items: center;
+}
+
+.contact-left p ion-icon {
+    color: #f80483;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #f80483;
+    transition: all 1s;
+    position: relative;
+    display: inline-block;
+    padding: 5px 3px;
+}
+
+.social-icons a:hover {
+    transform: translateY(-10px);
+    color: black;
+}
+
+.btn.btn2 {
+    background-color: #f80483;
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.btn2:hover {
+    background-color: #ff60b3;
+    ;
+}
+
+.contact-right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin: 4px;
+    padding: 10px;
+    justify-content: center;
+    /* text-align: center; */
+    background: #e2e2e2;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border: none;
+}
+
+.contact-right form button {
+    display: block;
+    margin: 0px auto;
+}
+
+
+#copyright {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    background: #f80483;
+    color: white;
+}
+
+#copyright p,
+#copyright span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about,
+#services,
+#contact,
+#portfolio {
+    background-color: white;
+}
+
+@media screen and (max-width: 855px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header_text h1 {
+        font-size: 2rem;
+        max-width: 55%;
+        margin-left: 20px;
+    }
+
+    #header::before {
+        display: none;
+    }
+
+    #header {
+        height: 60vh;
+        max-height: fit-content;
+    }
+
+    #header::after {
+        content: "";
+        background: url(images/bgForPhone.png)no-repeat center center/cover;
+        background-size: cover;
+        background-size: cover;
+        background-size: cover;
+        background-size: contain;
+        z-index: -1;
+        top: 5rem;
+        right: 0;
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        opacity: 1;
+        filter: revert;
+    }
+
+    .header_text {
+        margin-top: 10%;
+        font-size: 23px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 3rem;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+        flex-direction: column;
+    }
+
+    .sub-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-left {
+        flex-basis: 35%;
+        line-height: 1.5;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #copyright p {
+        display: block;
+        text-align: center;
+    }
+    .about-col-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-col-1 img {
+        width: 60%;
+        border-radius: 15px;
+        filter: drop-shadow(2px 4px 6px black);
+        border: 2px solid black;
+        box-shadow: 0px 1px 5px 0px black;
+    }
+}
